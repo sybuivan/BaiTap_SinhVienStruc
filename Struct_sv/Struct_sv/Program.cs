@@ -50,19 +50,19 @@ namespace Struct_sv
             return (SV.DIEMC_248 + SV.DIEMJAVA_248 + SV.DIEMWEB_248) / 3;
         }
 
-        static void FindByName_248(String keyword_248, int[] arr_248)
+        static void FindByName_248(SinhVien sv, String keyword_248, int[] arr_248)
         {
-            SinhVien sv = new SinhVien();
             foreach (var item in arr_248)
             {
                 if (String.Compare(sv.HOTEN_248, keyword_248) ==0)
                 {
-                    Console.WriteLine("Tim thay sinh vien: {0}", sv.HOTEN_248);
+                    Console.WriteLine("Tim thay sinh vien: {0} o vi tri {1}", sv.HOTEN_248, item);
                     Console.WriteLine("Diem tb sinh vien: {0}", DiemTBSinhVien_248(sv));
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Khong tim thay sinh vien");
+                    Console.WriteLine("Khong tim thay sinh vien: {0}", keyword_248);
                 }
 
             }
@@ -94,7 +94,7 @@ namespace Struct_sv
             Console.WriteLine("\n\t Nhap ten sinh vien can tim:");
             ten_248 = Console.ReadLine();
 
-            FindByName_248(ten_248, arr_28);
+            FindByName_248(sv, ten_248, arr_28);
             Console.ReadKey();
         }
     }
