@@ -1,0 +1,7 @@
+E:\NĂM 3\KỲ 221\Lập trình C#\Bai Tap\Struct_sv\Struct_sv\bin\Debug\Struct_sv.exe.config
+E:\NĂM 3\KỲ 221\Lập trình C#\Bai Tap\Struct_sv\Struct_sv\bin\Debug\Struct_sv.exe
+E:\NĂM 3\KỲ 221\Lập trình C#\Bai Tap\Struct_sv\Struct_sv\bin\Debug\Struct_sv.pdb
+E:\NĂM 3\KỲ 221\Lập trình C#\Bai Tap\Struct_sv\Struct_sv\obj\Debug\Struct_sv.csproj.AssemblyReference.cache
+E:\NĂM 3\KỲ 221\Lập trình C#\Bai Tap\Struct_sv\Struct_sv\obj\Debug\Struct_sv.csproj.CoreCompileInputs.cache
+E:\NĂM 3\KỲ 221\Lập trình C#\Bai Tap\Struct_sv\Struct_sv\obj\Debug\Struct_sv.exe
+E:\NĂM 3\KỲ 221\Lập trình C#\Bai Tap\Struct_sv\Struct_sv\obj\Debug\Struct_sv.pdb
