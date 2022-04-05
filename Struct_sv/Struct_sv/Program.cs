@@ -23,7 +23,7 @@ namespace Struct_sv
         {
             GIOITINH_248 = 0
         }
-        static void NhapThongTinSinhVien_248(out SinhVien SV)
+        static SinhVien NhapThongTinSinhVien_248(SinhVien SV)
         {
             Console.Write(" Ma so: ");
             SV.MASO_248 = int.Parse(Console.ReadLine());
@@ -35,6 +35,8 @@ namespace Struct_sv
             SV.DIEMJAVA_248 = Double.Parse(Console.ReadLine());
             Console.Write(" Diem WEB: ");
             SV.DIEMWEB_248 = Double.Parse(Console.ReadLine());
+
+            return SV;
         }
         static void XuatThongTinSinhVien_248(SinhVien SV)
         {
@@ -50,13 +52,13 @@ namespace Struct_sv
             return (SV.DIEMC_248 + SV.DIEMJAVA_248 + SV.DIEMWEB_248) / 3;
         }
 
-        static void FindByName_248(SinhVien sv, String keyword_248, int[] arr_248)
+        static void FindByName_248(SinhVien[] arr_sv_248, String keyword_248, int soLuong_248)
         {
-            foreach (var item in arr_248)
+            foreach (SinhVien sv in arr_sv_248)
             {
                 if (String.Compare(sv.HOTEN_248, keyword_248) ==0)
                 {
-                    Console.WriteLine("Tim thay sinh vien: {0} o vi tri {1}", sv.HOTEN_248, item);
+                    Console.WriteLine("Tim thay sinh vien: {0} ", sv.HOTEN_248);
                     Console.WriteLine("Diem tb sinh vien: {0}", DiemTBSinhVien_248(sv));
                     break;
                 }
@@ -70,31 +72,35 @@ namespace Struct_sv
 
         static void Main(string[] args)
         {
-            int soLuong_248;
-            SinhVien sv = new SinhVien();
+            int soLuong_248, count = 1;
 
             Console.Write("Nhap bao nhieu sinh vien: ");
             soLuong_248 = int.Parse(Console.ReadLine());
 
-            int[] arr_28 = new int[soLuong_248];
+            SinhVien[] arr_sv_248 = new SinhVien[soLuong_248];
 
-            foreach (var item in arr_28)
+            for(int i_248 = 0; i_248 < soLuong_248; i_248++)
             {
-                Console.WriteLine("\t Nhap sinh vien: {0}", (item+1));
-                NhapThongTinSinhVien_248(out sv);
+                SinhVien sv = new SinhVien();
+                Console.WriteLine("\t Nhap sinh vien: {0}", (i_248));
+                sv = NhapThongTinSinhVien_248(sv);
+                arr_sv_248[i_248] = sv;
             }
+           
 
-            foreach (var item in arr_28)
+            foreach (SinhVien sv in arr_sv_248)
             {
-                Console.WriteLine("\t Thong tin sinh vien: {0}", (item+1));
+
+                Console.WriteLine("\t Thong tin sinh vien: {0}", (count));
                 XuatThongTinSinhVien_248(sv);
+                count++;
             }
 
             string ten_248;
             Console.WriteLine("\n\t Nhap ten sinh vien can tim:");
             ten_248 = Console.ReadLine();
 
-            FindByName_248(sv, ten_248, arr_28);
+            FindByName_248(arr_sv_248, ten_248, soLuong_248);
             Console.ReadKey();
         }
     }
